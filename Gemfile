@@ -14,11 +14,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'flickr_fu'
 
 group :development, :test do
   gem 'byebug'
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'guard-rspec', require: false
+  gem 'figaro'
 end
 
 group :development do

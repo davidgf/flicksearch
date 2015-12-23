@@ -4,4 +4,10 @@ class SearchController < ApplicationController
 
   def search
   end
+
+  private
+
+  def search_params
+    params.permit(:text)
+  end
 end
