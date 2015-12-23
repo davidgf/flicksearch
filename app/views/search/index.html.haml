@@ -1,0 +1,5 @@
+.container
+  %h1 flickBOT
+  = form_tag search_path, :method => :get, :class => 'form-inline' do
+    %input#search-box.form-control{:type => "search", :required => true}
+    %button.btn.btn-primary{:title => "search"} Search
