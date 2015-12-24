@@ -5,7 +5,7 @@ RSpec.describe FlickrSearchService do
   let(:text_search) { FlickrSearchService.new(text: 'bagan') }
   let(:text_search_result) { text_search.search }
   let(:page) { 3 }
-  let(:paginated_text_search) { FlickrSearchService.new(text: 'bagan', page: page) }
+  let(:paginated_text_search) { FlickrSearchService.new(text: 'mandalay', page: page) }
   let(:paginated_text_search_result) { paginated_text_search.search }
 
   describe '#search' do
