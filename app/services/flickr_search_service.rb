@@ -10,7 +10,8 @@ class FlickrSearchService
   end
 
   def search
-    client.photos.search search_params
+    flickr_search_result = client.photos.search search_params
+    FlickrSearch.new flickr_search_result
   end
 
   private

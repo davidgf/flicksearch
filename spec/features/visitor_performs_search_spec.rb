@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'Visitor performs a photo search' do
   scenario 'with default params' do

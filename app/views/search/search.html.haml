@@ -2,5 +2,5 @@
 
 .container{style: "-webkit-column-count: 3; -webkit-column-gap: 0"}
   - @search_result.photos.each do |photo|
-    %img.flickr-photo{src: photo.url, style: "width: 100%"}
+    %img.flickr-photo{src: photo.thumbnail_url, style: "width: 100%"}
 }
