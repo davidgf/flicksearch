@@ -8,6 +8,10 @@ class FlickrSearch
     @photos = flickr_search_result.photos.map {|photo| FlickrPhoto.new photo }
   end
 
+  def text
+    flickr_search_result.options[:text]
+  end
+
   def page
     flickr_search_result.page
   end
