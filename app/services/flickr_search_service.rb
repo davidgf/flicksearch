@@ -1,6 +1,6 @@
 class FlickrSearchService
 
-  PER_PAGE = 20
+  PER_PAGE = 30
 
   attr_accessor :text, :page
 
