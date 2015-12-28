@@ -15,3 +15,15 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(function(){
+  $(document).on('click', '.flickr-photo', function(ev){
+    var imgUrl = $(this).data('large');
+    var imgOverlay = $('<img>').addClass('overlay').attr('src', imgUrl);
+    var overlayContainer = $('<div>').addClass('overlay-container');
+    $(overlayContainer).append(imgOverlay);
+    $('body').append(overlayContainer);
+    $(document).on('click', 'img.overlay,div.overlay-container', function() { $(overlayContainer).remove(); });
+  });
+
+})

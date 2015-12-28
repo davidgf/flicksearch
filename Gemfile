@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 
 gem 'jquery-rails'
+gem 'autoprefixer-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -21,6 +22,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'guard-rspec', require: false
+  gem 'selenium-webdriver'
   gem 'figaro'
 end
 
