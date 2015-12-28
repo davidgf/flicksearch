@@ -1,8 +1,8 @@
 %h1 Search#search
 
-.container{style: "-webkit-column-count: 3; -webkit-column-gap: 0"}
+.container#photos
   - @search_result.photos.each do |photo|
-    %img.flickr-photo{src: photo.thumbnail_url, style: "width: 100%"}
+    %img.flickr-photo{src: photo.thumbnail_url, style: "width: 100%", data: { large: photo.large_url }}
 
   = link_to '<<', search_path(text: @search_result.text, page: @search_result.prev_page)
   = link_to '>>', search_path(text: @search_result.text, page: @search_result.next_page)
