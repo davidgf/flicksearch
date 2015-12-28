@@ -22,6 +22,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'guard-rspec', require: false
+  gem 'selenium-webdriver'
   gem 'figaro'
 end
 
