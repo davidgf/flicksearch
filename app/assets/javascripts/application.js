@@ -16,6 +16,12 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+echo.init({
+  offset: 10000,
+  throttle: 250,
+  unload: false
+});
+
 $(function(){
   $(document).on('click', '.flickr-photo', function(ev){
     var imgUrl = $(this).data('large');

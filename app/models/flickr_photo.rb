@@ -5,7 +5,7 @@ class FlickrPhoto
   end
 
   def thumbnail_url
-    flickr_photo.url(:medium)
+    flickr_photo.url(:small_320)
   end
 
   def large_url
