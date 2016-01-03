@@ -14,16 +14,38 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require wow.min
 //= require_tree .
 
-$(function(){
-  $(document).on('click', '.flickr-photo', function(ev){
+$(document).on('ready page:load', function () {
+
+  echo.init({
+    offset: 10000,
+    throttle: 250,
+    unload: false
+  });
+
+  $('.flickr-photo').on('click', function(ev){
     var imgUrl = $(this).data('large');
     var imgOverlay = $('<img>').addClass('overlay').attr('src', imgUrl);
     var overlayContainer = $('<div>').addClass('overlay-container');
     $(overlayContainer).append(imgOverlay);
     $('body').append(overlayContainer);
     $(document).on('click', 'img.overlay,div.overlay-container', function() { $(overlayContainer).remove(); });
+  });
+
+  var navbar = $('.navbar');
+  var navHeight = navbar.height();
+
+  new WOW({mobile: false}).init();
+
+  $(window).scroll(function() {
+    if($(this).scrollTop() >= navHeight) {
+        navbar.addClass('navbar-color');
+    }
+    else {
+        navbar.removeClass('navbar-color');
+    }
   });
 
 })

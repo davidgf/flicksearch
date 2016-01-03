@@ -35,4 +35,12 @@ class FlickrSearch
       page + 1
     end
   end
+
+  def first_page?
+    page == 1
+  end
+
+  def last_page?
+    page == pages
+  end
 end

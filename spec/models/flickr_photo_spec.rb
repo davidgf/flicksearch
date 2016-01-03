@@ -8,7 +8,7 @@ RSpec.describe FlickrPhoto, type: :model do
   describe '#thumbnail_url' do
 
     it 'delegates on flickr_fu photo' do
-      expect(flickr_fu_photo).to receive(:url).with(:medium)
+      expect(flickr_fu_photo).to receive(:url).with(:small_320)
       flickr_photo.thumbnail_url
     end
   end

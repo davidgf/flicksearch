@@ -1,8 +1,15 @@
-%h1 Search#search
+= render partial: 'common/header'
 
 .container#photos
   - @search_result.photos.each do |photo|
-    %img.flickr-photo{src: photo.thumbnail_url, style: "width: 100%", data: { large: photo.large_url }}
+    %img.flickr-photo{src: image_path("loading_spinner.gif"), style: "width: 100%", data: { large: photo.large_url, echo: photo.thumbnail_url }}
 
-  = link_to '<<', search_path(text: @search_result.text, page: @search_result.prev_page)
-  = link_to '>>', search_path(text: @search_result.text, page: @search_result.next_page)
+.container
+  .row
+    %ul.pagination
+      %li{:class => ("disabled" if @search_result.first_page?)}
+        = link_to search_path(text: @search_result.text, page: @search_result.prev_page) do
+          %span &laquo
+      %li{:class => ("disabled" if @search_result.last_page?)}
+        = link_to search_path(text: @search_result.text, page: @search_result.next_page) do
+          %span &raquo
