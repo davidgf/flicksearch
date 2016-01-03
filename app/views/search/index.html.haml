@@ -4,3 +4,6 @@
     = form_tag search_path, :method => :get, :class => 'form-inline' do
       .input-group
         %input#search-box.form-control{:type => "search", :required => true, :name => "text", :placeholder => "Type your search..."}
+          .input-group-btn
+            %button.btn.btn-default{:type => "submit"}
+              %i.glyphicon.glyphicon-search
