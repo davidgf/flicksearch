@@ -118,10 +118,10 @@ h6 {
 /* ---------------------------------------------- */
 
 .navbar {
-  background: none;
+  background-color: #FFF;
   border-radius: 0;
   border: 0;
-  padding: 20px 0;
+  padding: 20px 10px;
   text-transform: uppercase;
   color: #000 !important;
   transition: all 0.125s ease-in-out 0s;
@@ -145,7 +145,7 @@ h6 {
 }
 
 .navbar-custom .navbar-toggle .icon-bar {
-  background: #FFF;
+  background: #222;
 }
 
 .navbar-custom .navbar-nav > li > a,
