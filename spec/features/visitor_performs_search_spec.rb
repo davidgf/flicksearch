@@ -4,7 +4,7 @@ feature 'Photo search' do
   scenario 'visitor fills in search form' do
     visit root_path
     fill_in 'search-box', with: 'bagan'
-    click_button 'search'
+    click_button 'search-btn'
 
     expect(page).to have_selector('img.flickr-photo', count: FlickrSearchService::PER_PAGE)
   end
